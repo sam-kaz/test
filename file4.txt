@@ -1,3 +1,10 @@
 This is some text in file 4
 more data added
 more data 
+added one more line from local repo
+added new info from local repo
+added line from git to create conflict
+added more line from locl repo
+
+
+
