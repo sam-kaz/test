@@ -1,1 +1,1 @@
-This is some text in file 4
+This is some text in file 4, some more data is added to see conflict issue
