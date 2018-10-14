@@ -1,1 +1,4 @@
 This is some text in file 2 data added into local repo
+This is some text in file 2
+addition of new data from git
+
