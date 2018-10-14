@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 This is some text in file 4, some more data is added to see conflict issue more data
+=======
+This is some text in file 4
+more data added
+more data 
+>>>>>>> 7c13fe17e5affee279e4e38579b0fb21e706cc65
