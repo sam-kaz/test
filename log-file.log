@@ -1,0 +1,116 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36min.sivalabs:freelancer-kit[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding freelancer-kit 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.1.0:clean[m [1m(default-clean)[m @ [36mfreelancer-kit[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.1:prepare-agent[m [1m(default-prepare-agent)[m @ [36mfreelancer-kit[0;1m ---[m
+[[1;34mINFO[m] argLine set to "-javaagent:/home/sam/.m2/repository/org/jacoco/org.jacoco.agent/0.8.1/org.jacoco.agent-0.8.1-runtime.jar=destfile=/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/jacoco.exec,excludes=in/sivalabs/freelancerkit/entities/*:in/sivalabs/freelancerkit/*Application"
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.1.1.RELEASE:build-info[m [1m(default)[m @ [36mfreelancer-kit[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:resources[m [1m(default-resources)[m @ [36mfreelancer-kit[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 4 resources
+[[1;34mINFO[m] Copying 5 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:compile[m [1m(default-compile)[m @ [36mfreelancer-kit[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 5 source files to /home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.1.0:testResources[m [1m(default-testResources)[m @ [36mfreelancer-kit[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:testCompile[m [1m(default-testCompile)[m @ [36mfreelancer-kit[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 3 source files to /home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.1:test[m [1m(default-test)[m @ [36mfreelancer-kit[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  4.298 s
+[[1;34mINFO[m] Finished at: 2021-09-29T01:09:58+05:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.1:test[m [1m(default-test)[m on project [36mfreelancer-kit[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.[m
+[[1;31mERROR[m] [1;31mExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?[m
+[[1;31mERROR[m] [1;31mCommand was /bin/sh -c cd "/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master" && /home/sam/dev/java/java11/bin/java -Xmx1024m -XX:MaxPermSize=256m -jar '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire/surefirebooter13200786131791211890.jar' '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire' 2021-09-29T01-09-58_436-jvmRun1 surefire759315837094335902tmp surefire_118226174321723091990tmp[m
+[[1;31mERROR[m] [1;31mError occurred in starting fork, check output in log[m
+[[1;31mERROR[m] [1;31mProcess Exit Code: 1[m
+[[1;31mERROR[m] [1;31mExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?[m
+[[1;31mERROR[m] [1;31mCommand was /bin/sh -c cd "/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master" && /home/sam/dev/java/java11/bin/java -Xmx1024m -XX:MaxPermSize=256m -jar '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire/surefirebooter1787195084291754143.jar' '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire' 2021-09-29T01-09-58_436-jvmRun2 surefire7720020628220851231tmp surefire_018085396979469890576tmp[m
+[[1;31mERROR[m] [1;31mError occurred in starting fork, check output in log[m
+[[1;31mERROR[m] [1;31mProcess Exit Code: 1[m
+[[1;31mERROR[m] [1;31morg.apache.maven.surefire.booter.SurefireBooterForkException: ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?[m
+[[1;31mERROR[m] [1;31mCommand was /bin/sh -c cd "/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master" && /home/sam/dev/java/java11/bin/java -Xmx1024m -XX:MaxPermSize=256m -jar '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire/surefirebooter13200786131791211890.jar' '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire' 2021-09-29T01-09-58_436-jvmRun1 surefire759315837094335902tmp surefire_118226174321723091990tmp[m
+[[1;31mERROR[m] [1;31mError occurred in starting fork, check output in log[m
+[[1;31mERROR[m] [1;31mProcess Exit Code: 1[m
+[[1;31mERROR[m] [1;31mExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?[m
+[[1;31mERROR[m] [1;31mCommand was /bin/sh -c cd "/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master" && /home/sam/dev/java/java11/bin/java -Xmx1024m -XX:MaxPermSize=256m -jar '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire/surefirebooter1787195084291754143.jar' '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire' 2021-09-29T01-09-58_436-jvmRun2 surefire7720020628220851231tmp surefire_018085396979469890576tmp[m
+[[1;31mERROR[m] [1;31mError occurred in starting fork, check output in log[m
+[[1;31mERROR[m] [1;31mProcess Exit Code: 1[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.awaitResultsDone(ForkStarter.java:510)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.runSuitesForkOnceMultiple(ForkStarter.java:382)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:297)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:246)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1183)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1011)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:857)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:956)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.cli.MavenCli.main(MavenCli.java:192)[m
+[[1;31mERROR[m] [1;31m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[m
+[[1;31mERROR[m] [1;31m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[m
+[[1;31mERROR[m] [1;31m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[m
+[[1;31mERROR[m] [1;31m	at java.base/java.lang.reflect.Method.invoke(Method.java:566)[m
+[[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)[m
+[[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)[m
+[[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)[m
+[[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)[m
+[[1;31mERROR[m] [1;31mCaused by: org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?[m
+[[1;31mERROR[m] [1;31mCommand was /bin/sh -c cd "/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master" && /home/sam/dev/java/java11/bin/java -Xmx1024m -XX:MaxPermSize=256m -jar '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire/surefirebooter1787195084291754143.jar' '/home/sam/Desktop/WS/WS/Java/Spring CI-CD/TravisCI/freelancer-kit-master/target/surefire' 2021-09-29T01-09-58_436-jvmRun2 surefire7720020628220851231tmp surefire_018085396979469890576tmp[m
+[[1;31mERROR[m] [1;31mError occurred in starting fork, check output in log[m
+[[1;31mERROR[m] [1;31mProcess Exit Code: 1[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:669)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.access$600(ForkStarter.java:115)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter$1.call(ForkStarter.java:371)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter$1.call(ForkStarter.java:347)[m
+[[1;31mERROR[m] [1;31m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[m
+[[1;31mERROR[m] [1;31m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[m
+[[1;31mERROR[m] [1;31m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[m
+[[1;31mERROR[m] [1;31m	at java.base/java.lang.Thread.run(Thread.java:834)[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
