@@ -1,5 +1,5 @@
 #FROM frolvlad/alpine-oraclejdk8:slim
-FROM openjdk:14-jdk-alpine
+FROM openjdk:11-jdk-alpine
 VOLUME /tmp
 #ADD target/freelancer-kit-0.0.1-SNAPSHOT.jar app.jar
 ADD ["target/freelancer-kit-0.0.1-SNAPSHOT-exec.jar", "app.jar"]
