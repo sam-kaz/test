@@ -16,7 +16,7 @@ env:
   - secure: lbXmIOcqMHHjVOFY2WHomv7GiIGpRHV/0BnjpQHJJUAF+tsPU9DX7xwaPQpH3Gftbua5bK0nNI9WtrnxAC+eaxrJAgveKMNza99dRr7BiHQNQGE4MtZNd/Lf9CVhuM9RX1X21K9fWncASC+Bi7Yb/OGxx/64yzWWawhyAlK3oyGZXkqeX/O1THDtJkmh6GxsqOcRAH3SLfIA0yc9HoUSueUe0i23q4SI9R2MURot5S/BwgtnyYLBll09UakrTcwW9ytkeCyfJbW3At+/1cy2KhO3021+/uLBV85Bl2wgdMd75FP5VauxElPrYqwQVqkSdD6IXmSoyeOyl1T7QHc4wbcJCP/5rYwPesIrR4ugCzX1yvPV8qoW+j62IEiCMrDfjPHIYHRZAqQKx27lhOnIhsHVY4punAZvVTvsdD/vd5tHCvqjqGnQrttuoD6075ZTAsaGmQHJe+P4OWU3C14ws1IWU6X8W3qZ97h4gWSInqZnxal4OJqc2OkalPwVJt/LKLBVyLOZ62uQrmIjW8sB4J8xRb22skxm8T98QJJ+64UVI/nPauMpMqO/AFSKc7eHDbrqmJaPbfIdm+HnG0j58LvzkMMmlb2SVHkEB4hVb8UF9F6K2+/7kC9X6JZTC+58K5tDa1GXKWujnUShWEUI29tSmf8F1x6pW82ARKyR++o=
   - secure: FG3IjnY9zOVSLr+9XjA2nbEODcjqTjw/OTWg1EjHoZiW4q12gGmz3lOvaYNYeYPzndS3hBWqfcVV/hSdyxF3I8UrLWqYFmREaUWj+n5TE6jsPkBtTTgpplOdJtryihvDz6MU3VqUtdJh1d2/jRMHSDriKzW8MR5eNf2tErEb6qtPK8a4NQOmbN5dDOmTFqTD5cMEbOjLx+CUpQMmjaVVJU2ZgZaZUSws9Z/yh583XoQODmxtiLpK6t2XUBzte4mTkaX55lD7jHKiGrd+HV5/KDg9b+U6Rvxo3Enw/azZx1JzRdaIvpwVqFWvQikUZXZx+foIWVos4bnao/s0rs3QLq1DqPTXw+fR22yiIhEr8VWrou+oiUVuhVjvZn4MoujSkWnyQ65QocjSnnOeExLZruDM2tKePZIyIU+67MOYzDiqiNUQj9VV4jqeCvxzvmaL4duUbQNkXjNbu5P7EEcoXhki3yjCjzwTABRyFRw0lufyZ40XEaIIj8XFgxiRrZclUM/HCVLN3ZhbTWTONQS9vvpPajhZD8xaItsFqBF+sSbZE8iK6JXzto0t/MHXqSw+z1tp04bLmbuuTgtYCNXmRZb2X1x3bmvGVrOA2s8QSRDzwNUsiubaqvrZZY1MzuW8H7JruJEJD0Zx3Zd1sf9U2DaIcqL7yXvyfzTkpB3gN3c=
   - secure: V2rYNDLV88YkU3KdJiKU41zORHN5fpwUOVCjunH+zDjUAvuvM4bOuOKHhufuApeG+TpuSM5L1Wj5+Hv+48LXJm8b1LhEp3GVNXykCHjsagtnQFVhT4o+tdw7L8hAM7h+LyLn7Y35wb+Swu0ZOgRVaBMACxqlI++ZYnl4IcNjWHIUD0ZzDcFDfBBiMpO0wHf07PYUZD8ujBAa68hKwicBp8f1HbsE3nUOr0XxiP0+oYKpzuBJBLbPXxEQUvuu0SkilUyE654hH2k+e/AI6jQVRyz1pQq97fM98mubLf2B0jXCPRaJD8iNCyU1kIhE1qF6X1tujIlLGCpgr2/Eu6n1eH7lO7C5+Eu+WZO1Qu0cifz4d5PDro4No3Wp6ZCRQ+iZwW6JS3ZzmZmHPsrsUNv2nyoJtWNrkuS0bbPY+Zzy4CMsNJAJxJw9+6YjccEzWNyBRVflaFtgmVpXdejiubY3U1mt8WmTixt+wBZEYhNwGsK8n1j0UFyBEBDAnejA6U4MoJ7dEhIJ/ha/2n1j+8jfrpAOlnmjOdlbizjOf8bbVU0uABCp05hgcmqzbpTGKRHl9ZY9fAc/+BqlNpBraeL9Zh9CWyp/7DNHvoaN0ruXcexLzSS8fdxWFdG0sj9RHV2HkvPaQkz5ff7tWf3m4InQEB8Yj76P/IqGEPmxYQFrjdY=
-  - COMMIT=${TRAVIS_COMMIT::9}
+  - COMMIT=${TRAVIS_COMMIT:9}
 
 cache:
   directories:
@@ -34,3 +34,12 @@ script:
 - ./mvnw clean package -DskipTests=true
 - ./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -X
 - echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+after_success:
+- docker login -u $DOCKER_USER -p $DOCKER_PASS
+- export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH
+  ; fi`
+- export IMAGE_NAME=sydkaz/freelancer-kit
+- docker build -t $IMAGE_NAME:$COMMIT .
+- docker tag $IMAGE_NAME:$COMMIT $IMAGE_NAME:$TAG
+- docker push $IMAGE_NAME
