@@ -16,10 +16,11 @@ addons:
   sonarcloud:
     organization: sam-kaz-github
     token: "$SONAR_TOKEN"
+before_script:
+  - "docker image rm test_freelancerkit freelancer-kit-master_freelancerkit freelancekit_freelancerkit travisci_freelancerkit -f"
 script:
-- "docker image rm test_freelancerkit freelancer-kit-master_freelancerkit freelancekit_freelancerkit travisci_freelancerkit -f"
-- "./mvnw clean install -B"
-- "./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -X"
+  - "./mvnw clean install -B"
+  - "./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -X"
 cache:
   directories:
   - "$HOME/.m2/repository"
